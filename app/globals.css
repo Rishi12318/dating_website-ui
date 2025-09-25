@@ -24,3 +24,122 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom pink gradient background with glow effect */
+.pink-gradient-bg {
+  background: 
+    radial-gradient(circle at center, #FCE4EC 0%, #F8BBD0 100%),
+    radial-gradient(circle at center, rgba(252, 228, 236, 0.8) 0%, transparent 70%);
+  position: relative;
+}
+
+.pink-gradient-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(252, 228, 236, 0.6) 0%, transparent 50%),
+    radial-gradient(circle at 30% 20%, rgba(248, 187, 208, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at 70% 80%, rgba(248, 187, 208, 0.3) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* Cherry Blossom Animation */
+.cherry-petal {
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fall-and-sway {
+  0% {
+    transform: translateY(-100px) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(25%) translateX(10px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(50%) translateX(-10px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(75%) translateX(15px) rotate(270deg);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(400px) translateX(-5px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.cherry-petal-1 {
+  left: 10%;
+  animation-name: fall-and-sway;
+  animation-delay: 0s;
+}
+
+.cherry-petal-2 {
+  left: 20%;
+  animation-name: fall-and-sway;
+  animation-delay: 1s;
+}
+
+.cherry-petal-3 {
+  left: 35%;
+  animation-name: fall-and-sway;
+  animation-delay: 2s;
+}
+
+.cherry-petal-4 {
+  left: 50%;
+  animation-name: fall-and-sway;
+  animation-delay: 0.5s;
+}
+
+.cherry-petal-5 {
+  left: 65%;
+  animation-name: fall-and-sway;
+  animation-delay: 3s;
+}
+
+.cherry-petal-6 {
+  left: 80%;
+  animation-name: fall-and-sway;
+  animation-delay: 1.5s;
+}
+
+.cherry-petal-7 {
+  left: 25%;
+  animation-name: fall-and-sway;
+  animation-delay: 4s;
+}
+
+.cherry-petal-8 {
+  left: 75%;
+  animation-name: fall-and-sway;
+  animation-delay: 2.5s;
+}
+
+.cherry-petal-9 {
+  left: 15%;
+  animation-name: fall-and-sway;
+  animation-delay: 3.5s;
+}
+
+.cherry-petal-10 {
+  left: 85%;
+  animation-name: fall-and-sway;
+  animation-delay: 0.8s;
+}
