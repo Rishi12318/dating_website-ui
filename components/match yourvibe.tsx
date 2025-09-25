@@ -80,7 +80,7 @@ export default function MatchYourVibe() {
         {/* Section Title */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4">            
-            <h2 className="text-5xl sm:text-6xl font-bold" style={{ 
+            <h2 className="text-5xl sm:text-6xl font-bold animate-slideInLeft animate-float" style={{ 
               color: '#FF69B4',
               fontFamily: 'cursive',
               fontStyle: 'italic',
@@ -91,7 +91,7 @@ export default function MatchYourVibe() {
             </h2>
             
             {/* Right love.svg with matching background */}
-            <div className="w-12 h-12 transform rotate-12 opacity-90 rounded-full p-2" style={{ backgroundColor: '#DC143C' }}>
+            <div className="w-12 h-12 transform rotate-12 opacity-90 rounded-full p-2 animate-bounceIn animate-delay-400" style={{ backgroundColor: '#DC143C' }}>
               <Image
                 src="/love.svg"
                 alt="Love decoration"

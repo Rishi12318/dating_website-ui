@@ -39,13 +39,13 @@ export default function SignUpPage() {
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100 px-4 py-12">
-      <div className="w-full max-w-md relative">
-        <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-rose-400 to-red-400 rounded-3xl blur opacity-30"></div>
+      <div className="w-full max-w-md relative animate-fadeInUp">
+        <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-rose-400 to-red-400 rounded-3xl blur opacity-30 animate-pulse-custom"></div>
         <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl p-8 border border-white/40">
-          <h1 className="text-3xl font-bold text-center mb-6 tracking-tight" style={{ color: '#DC143C' }}>
+          <h1 className="text-3xl font-bold text-center mb-6 tracking-tight animate-bounceIn" style={{ color: '#DC143C' }}>
             Create Your Account
           </h1>
-          <p className="text-center text-sm text-gray-600 mb-8">Start your journey – it only takes a moment.</p>
+          <p className="text-center text-sm text-gray-600 mb-8 animate-fadeInUp animate-delay-200">Start your journey – it only takes a moment.</p>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export default function FooterSection() {
@@ -41,10 +43,10 @@ export default function FooterSection() {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Newsletter Section */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
+      <div className="py-16" style={{ background: 'linear-gradient(to right, #DC143C, #B22222, #8B0000)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-3xl font-bold mb-4">Stay in the Loop</h3>
-          <p className="text-xl mb-8 text-purple-100">
+          <p className="text-xl mb-8" style={{ color: '#FFE4E1' }}>
             Get the latest updates, features, and exclusive beta access delivered to your inbox.
           </p>
           <div className="max-w-md mx-auto flex gap-4">
@@ -53,7 +55,7 @@ export default function FooterSection() {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/30"
             />
-            <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-purple-50 transition-colors duration-200">
+            <button className="bg-white px-6 py-3 rounded-full font-semibold transition-colors duration-200 hover:bg-red-50" style={{ color: '#DC143C' }}>
               Subscribe
             </button>
           </div>
@@ -67,7 +69,7 @@ export default function FooterSection() {
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(to bottom right, #DC143C, #B22222)' }}>
                   <span className="text-white font-bold text-lg">W</span>
                 </div>
                 <span className="text-2xl font-bold">WinkVibe</span>

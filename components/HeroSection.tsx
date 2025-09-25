@@ -102,13 +102,18 @@ export default function HeroSection() {
           <div className="text-center relative left-12 sm:left-24 lg:left-32">
             {/* WinkVibe Brand Name */}
             <div className="mb-16 flex flex-col items-center">
-              <h1 className="text-6xl sm:text-7xl font-bold italic tracking-wide whitespace-nowrap" style={{ color: '#DC143C' }}>
-                WinkV<span className="relative inline-block">i<span className="absolute -top-2 left-1/2 transform -translate-x-1/2 text-3xl">❤️</span></span>be
+              <h1 className="text-6xl sm:text-7xl font-bold italic tracking-wide whitespace-nowrap animate-bounceIn animate-textGlow" style={{ color: '#DC143C' }}>
+                WinkV<span className="relative inline-block">i<span className="absolute -top-2 left-1/2 transform -translate-x-1/2 text-3xl animate-pulse-custom">❤️</span></span>be
               </h1>
               <button
                 type="button"
                 aria-label="Let's Wink"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 px-8 py-3 text-lg font-semibold text-white shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 hover:from-pink-600 hover:via-rose-600 hover:to-red-600 focus:outline-none focus:ring-4 focus:ring-pink-300 active:scale-[0.97] transition"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r px-8 py-3 text-lg font-semibold text-white shadow-lg hover:shadow-lg focus:outline-none focus:ring-4 active:scale-[0.97] transition animate-fadeInUp animate-delay-600"
+                style={{ 
+                  background: 'linear-gradient(to right, #DC143C, #B22222, #8B0000)',
+                  boxShadow: '0 10px 15px -3px rgba(220, 20, 60, 0.3), 0 4px 6px -2px rgba(220, 20, 60, 0.05)',
+                  focusRingColor: '#FFE4E1'
+                }}
                 onClick={() => {
                   router.push('/signup');
                 }}
