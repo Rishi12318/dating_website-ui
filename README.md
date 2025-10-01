@@ -1,16 +1,31 @@
 # Dating - Modern Dating Platform
 
-A beautiful, modern dating website built with Next.js, featuring stunning animations, responsive design, and an intuitive user experience to help people find meaningful connections.
+[![Next.js](https://img.shields.io/badge/Next.js-15.5.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.1.0-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
+> A beautiful, modern dating website built with Next.js, featuring stunning animations, responsive design, and an intuitive user experience to help people find meaningful connections.
+
+## 🌟 Live Demo
+
+🔗 **[View Live Demo](https://dating-website-ui.vercel.app)** *(Deploy to get this link)*
+
+## 📸 Screenshots
+
+*Add screenshots of your website here once deployed*
 
 ## ✨ Features
 
-- **Modern Design**: Clean, romantic interface with cherry blossom animations and gradient themes
-- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
-- **Interactive Animations**: Lottie animations and custom CSS animations for engaging user experience
-- **User Reviews System**: Real testimonials and success stories from happy couples
-- **Compatibility System**: Advanced matching algorithms to find perfect matches
-- **Multi-step Signup**: Smooth onboarding process with progressive disclosure
-- **Beautiful Hero Section**: Eye-catching landing page with animated elements
+- 🎨 **Modern Design**: Clean, romantic interface with cherry blossom animations and gradient themes
+- 📱 **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
+- ⚡ **Interactive Animations**: Lottie animations and custom CSS animations for engaging user experience
+- 💕 **User Reviews System**: Real testimonials and success stories from happy couples
+- 🧠 **Compatibility System**: Advanced matching algorithms to find perfect matches
+- 📝 **Multi-step Signup**: Smooth onboarding process with progressive disclosure
+- 🌸 **Beautiful Hero Section**: Eye-catching landing page with animated elements
+- 🎭 **Custom Animations**: Heart emoji animations and romantic decorative elements
 
 ## 🚀 Tech Stack
 
