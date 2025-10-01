@@ -274,7 +274,7 @@ export default function ReviewsSection() {
 
                 {/* Review Text - shorter for better fit */}
                 <blockquote className="text-lg text-white text-center mb-6 leading-relaxed font-light italic drop-shadow-lg">
-                  "{reviews[currentReview].text.substring(0, 120)}..."
+                  &ldquo;{reviews[currentReview].text.substring(0, 120)}...&rdquo;
                 </blockquote>
 
                 {/* Reviewer Info */}

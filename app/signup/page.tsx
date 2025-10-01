@@ -30,7 +30,8 @@ export default function SignUpPage() {
       // Placeholder signup logic – integrate your API / auth SDK here
       await new Promise(r => setTimeout(r, 800));
       router.push("/" ); // Redirect to home (or dashboard) after successful signup
-    } catch (e) {
+    } catch (error) {
+      console.error('Signup error:', error);
       setError("Signup failed. Please try again.");
     } finally {
       setLoading(false);

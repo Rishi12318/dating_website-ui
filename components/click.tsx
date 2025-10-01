@@ -135,7 +135,7 @@ export default function ClickSection() {
             
             <div className="space-y-4 flex-1 overflow-y-auto">
               <div className="border rounded-lg p-4" style={{ borderColor: '#DC143C', backgroundColor: '#FFE4E1' }}>
-                <div className="text-sm font-semibold mb-3" style={{ color: '#DC143C' }}>What's your ideal date?</div>
+                <div className="text-sm font-semibold mb-3" style={{ color: '#DC143C' }}>What&apos;s your ideal date?</div>
                 <div className="grid grid-cols-2 gap-2">
                   <button className="p-2 rounded-lg text-xs transition-colors" style={{ backgroundColor: '#FFCCCB', color: '#DC143C' }}>🍽️ Dinner</button>
                   <button className="p-2 rounded-lg text-xs transition-colors" style={{ backgroundColor: '#FFCCCB', color: '#DC143C' }}>🎬 Movies</button>
