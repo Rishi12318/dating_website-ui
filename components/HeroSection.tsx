@@ -111,8 +111,7 @@ export default function HeroSection() {
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r px-8 py-3 text-lg font-semibold text-white shadow-lg hover:shadow-lg focus:outline-none focus:ring-4 active:scale-[0.97] transition animate-fadeInUp animate-delay-600"
                 style={{ 
                   background: 'linear-gradient(to right, #DC143C, #B22222, #8B0000)',
-                  boxShadow: '0 10px 15px -3px rgba(220, 20, 60, 0.3), 0 4px 6px -2px rgba(220, 20, 60, 0.05)',
-                  focusRingColor: '#FFE4E1'
+                  boxShadow: '0 10px 15px -3px rgba(220, 20, 60, 0.3), 0 4px 6px -2px rgba(220, 20, 60, 0.05)'
                 }}
                 onClick={() => {
                   router.push('/signup');
