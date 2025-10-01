@@ -55,7 +55,7 @@ export default function MatchYourVibe() {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative" style={{ backgroundColor: '#DC143C' }}>
+    <section className="py-20 px-4 sm:px-6 lg:px-8 relative" style={{ backgroundColor: '#b33965' }}>
       {/* Left Side Background Image */}
       <div className="absolute left-4 top-1/2 transform -translate-y-1/2 -rotate-12 scale-125 w-64 h-80 opacity-95 z-0 hidden lg:block">
         <Image
@@ -81,7 +81,7 @@ export default function MatchYourVibe() {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4">            
             <h2 className="text-5xl sm:text-6xl font-bold animate-slideInLeft animate-float" style={{ 
-              color: '#FF69B4',
+              color: 'white',
               fontFamily: 'cursive',
               fontStyle: 'italic',
               letterSpacing: '0.1em',

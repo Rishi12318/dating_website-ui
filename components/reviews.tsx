@@ -19,7 +19,7 @@ export default function ReviewsSection() {
       age: 28,
       location: "New York, NY",
       rating: 5,
-      text: "WinkVibe changed my life! I found my soulmate through their amazing compatibility system. The journey from signup to finding love was so smooth and enjoyable.",
+      text: "Dating changed my life! I found my soulmate through their amazing compatibility system. The journey from signup to finding love was so smooth and enjoyable.",
       image: "💕",
       relationship: "Found love in 3 months"
     },
@@ -29,7 +29,7 @@ export default function ReviewsSection() {
       age: 32,
       location: "San Francisco, CA",
       rating: 5,
-      text: "The compatibility test was incredibly accurate. I met Emma through WinkVibe and we're getting married next spring! Thank you for bringing us together.",
+      text: "The compatibility test was incredibly accurate. I met Emma through Dating and we're getting married next spring! Thank you for bringing us together.",
       image: "🌸",
       relationship: "Engaged after 6 months"
     },
@@ -39,7 +39,7 @@ export default function ReviewsSection() {
       age: 26,
       location: "Los Angeles, CA",
       rating: 5,
-      text: "I was skeptical about dating apps, but WinkVibe's approach is so different. The preference settings helped me find exactly what I was looking for. Now I'm happier than ever!",
+      text: "I was skeptical about dating apps, but Dating's approach is so different. The preference settings helped me find exactly what I was looking for. Now I'm happier than ever!",
       image: "🌺",
       relationship: "In a relationship for 1 year"
     },
@@ -153,7 +153,7 @@ export default function ReviewsSection() {
             Love Stories & Reviews
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Real people, real connections, real happiness - see what our community says about their WinkVibe journey
+            Real people, real connections, real happiness - see what our community says about their Dating journey
           </p>
         </div>
 

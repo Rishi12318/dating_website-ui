@@ -100,14 +100,14 @@ export default function HeroSection() {
         <div className="flex items-center justify-center min-h-screen">
           {/* Content - positioned in the center empty space */}
           <div className="text-center relative left-12 sm:left-24 lg:left-32">
-            {/* WinkVibe Brand Name */}
+            {/* Dating Brand Name */}
             <div className="mb-16 flex flex-col items-center">
               <h1 className="text-6xl sm:text-7xl font-bold italic tracking-wide whitespace-nowrap animate-bounceIn animate-textGlow" style={{ color: '#DC143C' }}>
-                WinkV<span className="relative inline-block">i<span className="absolute -top-2 left-1/2 transform -translate-x-1/2 text-3xl animate-pulse-custom">❤️</span></span>be
+                Dat<span className="relative inline-block">i<span className="absolute -top-2 left-1/2 transform -translate-x-1/2 text-3xl animate-pulse-custom">❤️</span></span>ng
               </h1>
               <button
                 type="button"
-                aria-label="Let's Wink"
+                aria-label="Let's date"
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r px-8 py-3 text-lg font-semibold text-white shadow-lg hover:shadow-lg focus:outline-none focus:ring-4 active:scale-[0.97] transition animate-fadeInUp animate-delay-600"
                 style={{ 
                   background: 'linear-gradient(to right, #DC143C, #B22222, #8B0000)',
@@ -118,8 +118,8 @@ export default function HeroSection() {
                   router.push('/signup');
                 }}
               >
-                <span>Let&apos;s Wink</span>
-                <span className="text-2xl">😉</span>
+                <span>Let&apos;s Date</span>
+                <span className="text-2xl">�</span>
               </button>
             </div>
           </div>

@@ -70,9 +70,9 @@ export default function FooterSection() {
             <div className="lg:col-span-2">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(to bottom right, #DC143C, #B22222)' }}>
-                  <span className="text-white font-bold text-lg">W</span>
+                  <span className="text-white font-bold text-lg">D</span>
                 </div>
-                <span className="text-2xl font-bold">WinkVibe</span>
+                <span className="text-2xl font-bold">Dating</span>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 The next-generation social platform where authentic connections flourish and creativity knows no bounds.
@@ -166,7 +166,7 @@ export default function FooterSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="text-gray-400 text-sm">
-              © {currentYear} WinkVibe. All rights reserved.
+              © {currentYear} Dating. All rights reserved.
             </div>
             <div className="flex items-center gap-6 text-sm text-gray-400">
               <span className="flex items-center gap-2">

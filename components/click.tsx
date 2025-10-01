@@ -45,7 +45,7 @@ export default function ClickSection() {
                 <span className="text-4xl animate-pulse" style={{ animationDelay: '1s' }}>💕</span>
               </div>
               
-              <div className="text-3xl font-bold mb-8" style={{ color: '#DC143C' }}>WinkVibe</div>
+              <div className="text-3xl font-bold mb-8" style={{ color: '#DC143C' }}>Dating</div>
               
               <button 
                 onClick={handleNextScreen}
@@ -72,7 +72,7 @@ export default function ClickSection() {
             
             <div className="text-center relative z-10">
               <div className="text-2xl font-bold mb-6" style={{ color: '#DC143C' }}>Sign Up</div>
-              <div className="text-sm mb-8" style={{ color: '#DC143C' }}>Join WinkVibe Today!</div>
+              <div className="text-sm mb-8" style={{ color: '#DC143C' }}>Join Dating Today!</div>
               
               <button 
                 onClick={handleNextScreen}
