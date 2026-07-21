@@ -1,0 +1,313 @@
+{
+	"info": {
+		"name": "Lovelle API",
+		"description": "AI-powered dating platform REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000/api/v1"
+		},
+		{
+			"key": "token",
+			"value": ""
+		}
+	],
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/auth/register/",
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"StrongPass123!\",\n  \"password_confirm\": \"StrongPass123!\"\n}",
+							"options": { "raw": { "language": "json" } }
+						}
+					}
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/auth/login/",
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"StrongPass123!\"\n}",
+							"options": { "raw": { "language": "json" } }
+						}
+					}
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/auth/token/refresh/",
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refresh\": \"<refresh_token>\"\n}",
+							"options": { "raw": { "language": "json" } }
+						}
+					}
+				},
+				{
+					"name": "Verify Email",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/auth/verify-email/",
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"token\": \"<verification_token>\"\n}",
+							"options": { "raw": { "language": "json" } }
+						}
+					}
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/auth/logout/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refresh\": \"<refresh_token>\"\n}",
+							"options": { "raw": { "language": "json" } }
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Profiles",
+			"item": [
+				{
+					"name": "Get/Update Profile",
+					"request": {
+						"method": "GET",
+						"url": "{{base_url}}/profiles/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+					}
+				},
+				{
+					"name": "List Profiles",
+					"request": {
+						"method": "GET",
+						"url": "{{base_url}}/profiles/list/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+					}
+				},
+				{
+					"name": "Upload Photo",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/profiles/photos/upload/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{ "key": "image", "type": "file", "src": "/path/to/photo.jpg" },
+								{ "key": "is_primary", "value": "true", "type": "text" }
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Matching",
+			"item": [
+				{
+					"name": "Discover",
+					"request": {
+						"method": "GET",
+						"url": "{{base_url}}/matching/discover/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+					}
+				},
+				{
+					"name": "Like User",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/matching/like/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"to_user\": \"<user_id>\",\n  \"is_super_like\": false\n}",
+							"options": { "raw": { "language": "json" } }
+						}
+					}
+				},
+				{
+					"name": "Dislike User",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/matching/dislike/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"to_user\": \"<user_id>\"\n}",
+							"options": { "raw": { "language": "json" } }
+						}
+					}
+				},
+				{
+					"name": "List Matches",
+					"request": {
+						"method": "GET",
+						"url": "{{base_url}}/matching/matches/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+					}
+				},
+				{
+					"name": "Block User",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/matching/block/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"blocked\": \"<user_id>\"\n}",
+							"options": { "raw": { "language": "json" } }
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Messaging",
+			"item": [
+				{
+					"name": "List Messages",
+					"request": {
+						"method": "GET",
+						"url": "{{base_url}}/messaging/<match_id>/messages/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+					}
+				},
+				{
+					"name": "Send Message",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/messaging/<match_id>/messages/send/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"content\": \"Hey! How are you?\",\n  \"message_type\": \"text\"\n}",
+							"options": { "raw": { "language": "json" } }
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Compatibility",
+			"item": [
+				{
+					"name": "List Questions",
+					"request": {
+						"method": "GET",
+						"url": "{{base_url}}/compatibility/questions/"
+					}
+				},
+				{
+					"name": "Submit Answers",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/compatibility/answers/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"answers\": [\n    {\"question\": \"<question_id>\", \"answer_value\": 4},\n    {\"question\": \"<question_id>\", \"answer_value\": 3}\n  ]\n}",
+							"options": { "raw": { "language": "json" } }
+						}
+					}
+				},
+				{
+					"name": "Calculate Compatibility",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/compatibility/calculate/<other_user_id>/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+					}
+				}
+			]
+		},
+		{
+			"name": "AI Features",
+			"item": [
+				{
+					"name": "Generate Bio",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/ml/ai/generate-bio/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"hobbies\": \"hiking, photography, cooking\",\n  \"interests\": \"travel, technology, art\",\n  \"personality_traits\": \"adventurous, creative, kind\"\n}",
+							"options": { "raw": { "language": "json" } }
+						}
+					}
+				},
+				{
+					"name": "Generate Icebreaker",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/ml/ai/icebreaker/<match_id>/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+					}
+				},
+				{
+					"name": "Suggest Reply",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/ml/ai/suggest-reply/<message_id>/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+					}
+				},
+				{
+					"name": "Explain Compatibility",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/ml/ai/explain-compatibility/<user_id>/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+					}
+				}
+			]
+		},
+		{
+			"name": "Recommendations",
+			"item": [
+				{
+					"name": "Get Recommendations",
+					"request": {
+						"method": "GET",
+						"url": "{{base_url}}/ml/recommendations/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+					}
+				}
+			]
+		},
+		{
+			"name": "Moderation",
+			"item": [
+				{
+					"name": "Report User",
+					"request": {
+						"method": "POST",
+						"url": "{{base_url}}/moderation/report/",
+						"header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"reported_user\": \"<user_id>\",\n  \"reason\": \"fake_profile\",\n  \"description\": \"This profile appears to be fake\"\n}",
+							"options": { "raw": { "language": "json" } }
+						}
+					}
+				}
+			]
+		}
+	]
+}
