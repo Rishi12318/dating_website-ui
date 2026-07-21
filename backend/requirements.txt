@@ -5,6 +5,10 @@ djangorestframework-simplejwt>=5.3
 django-cors-headers>=4.3
 django-environ>=0.11
 
+# Production server
+gunicorn>=22.0
+whitenoise>=6.6
+
 # Database
 psycopg2-binary>=2.9
 
