@@ -78,7 +78,8 @@ ASGI_APPLICATION = "lovelle.asgi.application"
 # Database
 import os as _os
 
-if _os.environ.get("DATABASE_URL"):
+_db_url = _os.environ.get("DATABASE_URL", "")
+if _db_url and _db_url != "auto-set-by-render-postgres":
     DATABASES = {
         "default": env.db("DATABASE_URL")
     }
@@ -127,6 +128,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Media files
