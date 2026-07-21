@@ -1,11 +1,9 @@
-import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 from collections import Counter
 
 
 class ContentBasedRecommender:
     def __init__(self):
+        from sklearn.feature_extraction.text import TfidfVectorizer
         self.vectorizer = TfidfVectorizer(max_features=500)
 
     def build_feature_vector(self, profile):
@@ -23,6 +21,7 @@ class ContentBasedRecommender:
         return " ".join(features)
 
     def compute_similarity(self, user_profile, candidate_profiles):
+        from sklearn.metrics.pairwise import cosine_similarity
         user_vector = self.build_feature_vector(user_profile)
         candidate_vectors = [self.build_feature_vector(p) for p in candidate_profiles]
 
@@ -77,6 +76,7 @@ class CollaborativeRecommender:
         self.version = "v1.0"
 
     def build_interaction_matrix(self, users, profiles):
+        import numpy as np
         n_users = len(users)
         n_profiles = len(profiles)
         matrix = np.zeros((n_users, n_profiles))
@@ -109,6 +109,8 @@ class CollaborativeRecommender:
         return matrix
 
     def predict_scores(self, user_idx, interaction_matrix):
+        import numpy as np
+        from sklearn.metrics.pairwise import cosine_similarity
         if user_idx >= interaction_matrix.shape[0]:
             return np.array([])
 
