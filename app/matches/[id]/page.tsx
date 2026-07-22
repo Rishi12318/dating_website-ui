@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
 import { api } from "@/lib/api";
+import CherryBlossom from "@/components/CherryBlossom";
 
 interface Message {
   id: string;
@@ -80,24 +81,26 @@ export default function ChatPage() {
 
   if (authLoading || loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100">
-        <div className="text-rose-500 text-lg animate-pulse">Loading chat...</div>
+      <div className="min-h-screen pink-gradient-bg flex items-center justify-center">
+        <div className="text-lg animate-pulse" style={{ color: "#DC143C" }}>Loading chat...</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100 flex flex-col">
+    <div className="min-h-screen pink-gradient-bg flex flex-col">
+      <CherryBlossom />
       {/* Header */}
       <header className="flex items-center gap-3 px-4 py-3 bg-white/70 backdrop-blur border-b border-white/40">
         <button onClick={() => router.push("/matches")} className="p-1 hover:bg-rose-50 rounded-full transition">
           ←
         </button>
         <div className="flex-1">
-          <h2 className="font-semibold text-gray-800">Chat</h2>
+          <h2 className="font-semibold italic tracking-wide" style={{ color: "#DC143C" }}>Chat</h2>
         </div>
         <button onClick={handleGetSuggestions} title="AI reply suggestions"
-          className="p-2 rounded-full bg-gradient-to-r from-pink-100 to-rose-100 hover:from-pink-200 hover:to-rose-200 transition text-sm">
+          className="p-2 rounded-full hover:from-pink-200 hover:to-rose-200 transition text-sm"
+          style={{ background: "linear-gradient(to right, #FFE4E1, #F8BBD0)" }}>
           ✨
         </button>
       </header>
@@ -116,9 +119,9 @@ export default function ChatPage() {
             <div key={msg.id} className={`flex ${isMine ? "justify-end" : "justify-start"}`}>
               <div className={`max-w-[75%] rounded-2xl px-4 py-2.5 ${
                 isMine
-                  ? "bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-br-md"
+                  ? "text-white rounded-br-md"
                   : "bg-white/80 text-gray-800 border border-white/40 shadow-sm rounded-bl-md"
-              }`}>
+              }`} style={isMine ? { background: "linear-gradient(to right, #DC143C, #B22222)" } : {}}>
                 <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
                 <p className={`text-[10px] mt-1 ${isMine ? "text-white/60" : "text-gray-400"}`}>
                   {new Date(msg.created_at).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
@@ -152,7 +155,8 @@ export default function ChatPage() {
             placeholder="Type a message..." rows={1}
             className="flex-1 rounded-2xl border border-gray-200 focus:border-pink-400 focus:ring-pink-400 px-4 py-2.5 bg-white/70 resize-none text-sm" />
           <button onClick={handleSend} disabled={!newMessage.trim() || sending}
-            className="w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white flex items-center justify-center shadow-lg shadow-pink-500/30 disabled:opacity-50 transition flex-shrink-0">
+            className="w-10 h-10 rounded-full text-white flex items-center justify-center shadow-lg shadow-pink-500/30 disabled:opacity-50 transition flex-shrink-0"
+            style={{ background: "linear-gradient(to right, #DC143C, #B22222)" }}>
             ↑
           </button>
         </div>

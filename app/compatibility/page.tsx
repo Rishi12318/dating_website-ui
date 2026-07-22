@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
 import { api } from "@/lib/api";
+import CherryBlossom from "@/components/CherryBlossom";
 
 interface Question {
   id: string;
@@ -68,21 +69,22 @@ export default function CompatibilityPage() {
 
   if (authLoading || loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100">
-        <div className="text-rose-500 text-lg animate-pulse">Loading quiz...</div>
+      <div className="min-h-screen pink-gradient-bg flex items-center justify-center">
+        <div className="text-lg animate-pulse" style={{ color: "#DC143C" }}>Loading quiz...</div>
       </div>
     );
   }
 
   if (submitted) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100 px-4">
+      <div className="min-h-screen pink-gradient-bg flex items-center justify-center px-4">
         <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl p-8 text-center max-w-md">
           <div className="text-6xl mb-4">🎯</div>
-          <h1 className="text-2xl font-bold mb-2" style={{ color: "#DC143C" }}>Answers Saved!</h1>
+          <h1 className="text-2xl font-bold mb-2 italic" style={{ color: "#DC143C" }}>Answers Saved!</h1>
           <p className="text-gray-600 mb-6">Your compatibility results will be calculated when you match with someone.</p>
           <button onClick={() => router.push("/discover")}
-            className="rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 py-3 font-semibold">
+            className="rounded-full text-white px-6 py-3 font-semibold"
+            style={{ background: "linear-gradient(to right, #DC143C, #B22222, #8B0000)" }}>
             Find Matches
           </button>
         </div>
@@ -93,12 +95,13 @@ export default function CompatibilityPage() {
   const categories = [...new Set(questions.map((q) => q.category))];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100">
+    <div className="min-h-screen pink-gradient-bg">
+      <CherryBlossom />
       <header className="flex items-center gap-3 px-6 py-4">
         <button onClick={() => router.push("/discover")} className="p-2 rounded-full bg-white/60 hover:bg-white/80 transition">
           ←
         </button>
-        <h1 className="text-xl font-bold" style={{ color: "#DC143C" }}>Compatibility Quiz</h1>
+        <h1 className="text-xl font-bold italic tracking-wide" style={{ color: "#DC143C" }}>Compatibility Quiz</h1>
       </header>
 
       <div className="max-w-lg mx-auto px-6 pb-12">
@@ -139,7 +142,8 @@ export default function CompatibilityPage() {
         )}
 
         <button onClick={handleSubmit} disabled={submitting}
-          className="w-full rounded-full bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 text-white font-semibold py-3 shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition disabled:opacity-60">
+          className="w-full rounded-full text-white font-semibold py-3 shadow-lg shadow-pink-500/30 hover:shadow-pink-500/50 transition disabled:opacity-60"
+          style={{ background: "linear-gradient(to right, #DC143C, #B22222, #8B0000)" }}>
           {submitting ? "Saving..." : "Save Answers"}
         </button>
       </div>

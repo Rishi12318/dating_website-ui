@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
 import { api } from "@/lib/api";
+import CherryBlossom from "@/components/CherryBlossom";
 
 interface Match {
   id: string;
@@ -37,19 +38,20 @@ export default function MatchesPage() {
 
   if (authLoading || loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100">
-        <div className="text-rose-500 text-lg animate-pulse">Loading matches...</div>
+      <div className="min-h-screen pink-gradient-bg flex items-center justify-center">
+        <div className="text-lg animate-pulse" style={{ color: "#DC143C" }}>Loading matches...</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100">
+    <div className="min-h-screen pink-gradient-bg">
+      <CherryBlossom />
       <header className="flex items-center justify-between px-6 py-4">
         <button onClick={() => router.push("/discover")} className="p-2 rounded-full bg-white/60 hover:bg-white/80 transition">
           ←
         </button>
-        <h1 className="text-xl font-bold" style={{ color: "#DC143C" }}>Matches</h1>
+        <h1 className="text-xl font-bold italic tracking-wide" style={{ color: "#DC143C" }}>Matches</h1>
         <div className="w-10" />
       </header>
 
@@ -60,7 +62,8 @@ export default function MatchesPage() {
             <h2 className="text-xl font-bold text-gray-700 mb-2">No matches yet</h2>
             <p className="text-gray-500 mb-4">Keep swiping to find someone special!</p>
             <button onClick={() => router.push("/discover")}
-              className="rounded-full bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 py-2 font-semibold">
+              className="rounded-full text-white px-6 py-2 font-semibold"
+              style={{ background: "linear-gradient(to right, #DC143C, #B22222, #8B0000)" }}>
               Discover People
             </button>
           </div>
