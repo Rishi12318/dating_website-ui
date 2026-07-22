@@ -34,7 +34,7 @@ export default function SignUpPage() {
     setLoading(true);
     try {
       await register(form.email, form.password, form.confirm);
-      router.push("/profile/setup");
+      router.push("/discover");
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : "Signup failed. Please try again.";
       setError(message);
