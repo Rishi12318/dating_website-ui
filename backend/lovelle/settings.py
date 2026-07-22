@@ -13,7 +13,7 @@ environ.Env.read_env(BASE_DIR / ".env", overrides=False)
 
 SECRET_KEY = env("DJANGO_SECRET_KEY", default="django-insecure-dev-key-change-in-production")
 DEBUG = env("DJANGO_DEBUG", default=True)
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["dating-website-ui-1.onrender.com", "localhost", "127.0.0.1"]
 
 INSTALLED_APPS = [
     "daphne",
